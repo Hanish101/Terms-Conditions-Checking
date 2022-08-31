@@ -1,0 +1,108 @@
+body{
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#main{
+    border: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgba(99, 99, 99, 0.733);
+}
+
+#cp{
+    border: none;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 0 50px 0px rgb(0, 0, 0) ;
+}
+
+#ic{
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    z-index: 1;
+    left: 50%;
+    top: 5%;
+    opacity: 0.3;
+}
+
+#cp > input {
+    height: 8%;
+    border-radius: 15px;
+}
+
+#txta{
+    position: absolute;
+    z-index: 2;
+    height: 30%;
+    width: 70%;
+    top: 45%;
+    left: 15%;
+    text-align: left;
+}
+
+#label{
+    z-index: 2;
+    position: absolute;
+    color: white;
+    top: 37%;
+    left: 18%;
+}
+
+#cp > #btn1 {
+    width: 10%;
+    position: absolute;
+    top: 79%;
+    left: 37%;
+    border: none;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#cp > #btn2 {
+    width: 10%;
+    position: absolute;
+    top: 79%;
+    right: 37%;
+    border: none;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#heading{
+    border-left: 5px white solid;
+    padding-left: 15px;
+    z-index: 5;
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    top: 3%;
+    left: 23%;
+}
+
+#desc{
+    position: absolute;
+    z-index: 5;
+    color: white;
+    left: 30%;
+    bottom: 1%;
+}

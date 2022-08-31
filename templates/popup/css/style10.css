@@ -1,0 +1,38 @@
+body{
+    background: rgb(0, 0, 0);
+}
+
+#home{
+    color: #ffffff;
+    font-size: 20px;
+    padding: 3px;
+    text-align: linear;
+    border: 1px solid #ffffff;
+    font-weight: bold;
+    border-radius:20px;
+    text-align: center;
+    }
+#but{
+    padding-top: 10px;
+    color: #ffffff;
+    font-size: 10px;
+            
+}
+#button{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 1px;
+}
+
+#button > a{
+    text-decoration: none;
+    
+}
+#abc{
+    color: #ffffff;
+    font-size: 7px;
+    text-align: linear;
+    text-decoration: none;
+
+}

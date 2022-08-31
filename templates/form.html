@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>
+        This is form page
+    </title>
+</head>
+<body>
+    <h1>information <font color="red">submitted</font></h1>
+
+    {% for key, value in result.items() %}
+    {% if value==0 %}
+        <font color="green">{{ key }} </font>
+    {% elif value==1 %}
+        <font color="blue">{{ key }} </font>
+    {% else %}
+        <font color="red">{{ key }} </font>
+    {% endif %}
+    {% endfor %}
+</body>
+
+</html>

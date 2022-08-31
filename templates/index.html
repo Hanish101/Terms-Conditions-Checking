@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='tabic.png') }}">
+    <title>InfinityCheck</title>
+
+</head>
+<body>
+    
+    <div id="main">
+
+        <img src="{{ url_for('static',filename='icon.png') }}" alt="icon" id="ic">
+        <p id="heading">Terms & Conditions<br>Checking Tool</p>
+
+        <form action="/submitted" method="POST" id="cp">
+            <input type="submit" value="Proceed" id="btn1">
+            <input type="reset" value="Clear" id="btn2">
+            <textarea name="terms" form="cp" id="txta"></textarea>
+        </form>
+
+        <p id="label">Paste the text here...</p>
+        <p id="desc">&#169;Made by Team Infinity as a part of Smart India Hackathon 2022</p>
+
+    </div>
+
+</body>
+</html>

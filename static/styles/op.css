@@ -1,0 +1,119 @@
+body{
+    overflow: hidden;
+}
+
+#main{
+    border: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0, 0, 0);
+}
+
+#cp{
+    border: none;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 0 50px 0px rgb(117, 117, 117) ;
+}
+
+#ic{
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    z-index: 10;
+    right: 10%;
+    top: -10%;
+    opacity: 0.3;
+}
+
+#cph{
+    position: absolute;
+    z-index: 2;
+    height: 92%;
+    width: 90%;
+    bottom: 0%;
+    left: 5%;
+    text-align: left;
+    background-color: white;
+    overflow-y: auto;
+}
+
+#heading{
+    border-left: 5px rgb(255, 255, 255) solid;
+    padding-left: 15px;
+    z-index: 5;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    top: -3%;
+    left: 7%;
+}
+
+#desc{
+    z-index: 6;
+    position: absolute;
+    z-index: 5;
+    color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    left: 30%;
+    bottom: 0%;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#antab{
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    text-align: center;
+    top: 75%;
+    padding: 30px;
+    font-size: 20px;
+    z-index: 50;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+#res{
+    /* border: 3px solid red; */
+    width: 30%;
+    position: absolute;
+    top: 27%;
+    z-index: 10;
+    right: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(173, 200, 228);
+    padding: 20px;
+
+}
+
+#cmd{
+    width: 15%;
+    position: absolute;
+    top: 2%;
+    border-radius: 10px;
+    right: 2%;
+    background: rgb(31, 0, 101);
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 2;
+    font-weight: bold;
+    height: 10%;
+}

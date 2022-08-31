@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/op.css') }}">
+
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Key', 'Value'],
+          ['Not Harmful', 7],
+          ['Average', 5],
+          ['Harmful', 3]
+        ]);
+
+        var options = {
+          title: 'Overall Analysis'
+        };
+
+        var options = {
+          slices: {
+            1 : { color: 'rgb(230, 210, 0)' },
+            2 : { color: 'rgb(153, 0, 0)' },
+            3 : { color: 'rgb(0, 17, 100)' }
+          }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script> -->
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='tabic.png') }}">
+    
+    <title>Infinity</title>
+</head>
+<body>
+    <div id="main">
+        <p id="heading">Terms & Conditions Checking Tool</p>
+<!--        <div id="cp">-->
+<!--            -->
+<!--        </div>   -->
+
+
+
+        <div id="cph">
+
+            <!-- <div id="hov">  <span id="n">&#9673;</span> Negavtive&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span id="a">&#9673;</span> Average&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span id="p">&#9673;</span> Positive
+            </div> -->
+
+<!--            <div id="piechart" style="width: 950px; height: 550px;"></div>-->
+
+
+
+            <table id="antab">
+                <tr style="background-color: black; color: white; height: 50px; font-size: 30px;">
+                    <th>ANALYSIS TABLE</th>
+                </tr>
+                {% for key, value in result.items() %}
+                    <tr>
+                        {% if value==0 %}
+                            <td style="background-color:rgb(11, 212, 0);">{{ key }} </td>
+                        {% elif value==1 %}
+                            <td style="background-color:rgb(230, 210, 0); color: black">{{ key }} </td>
+                        {% else %}
+                            <td style="background-color:rgb(255, 0, 0);">{{ key }} </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+        <p id="desc">&#169; Made by Team Infinity as a part of Smart India Hackathon 2022</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Coding train pop-up",
+    "version": "0.1",
+    "action": {
+          "default_popup": "popup.html" ,
+          "default_tittle": "A popup will come here",
+          "default_icon": "tabic.png"
+
+    }
+}

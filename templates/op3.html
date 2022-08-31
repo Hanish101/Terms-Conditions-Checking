@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/op.css') }}">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+
+        let good = 0;
+        good = {{ good }};
+        let average = 0;
+        average = {{ average }};
+        let bad = 0;
+        bad = {{ bad }};
+
+        
+        google.charts.load('current',{'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawFunction);
+        function drawFunction(){
+            var data= google.visualization.arrayToDataTable([
+                ['terms','quantity'],
+                ['Not Harmful', good  ],
+                ['Average', average],
+                ['Harmful', bad]
+            ]);
+            var options = {
+                colors : ['green', 'gold', 'brown']
+            };
+            var chart= new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='tabic.png') }}">
+    
+    <title>InfinityCheck</title>
+</head>
+<body>
+    <div id="main">
+        <p id="heading">Terms & Conditions Checking Tool</p>
+        <div id="cp">
+            
+        </div>   
+
+
+
+        <div id="cph">
+            
+            <div id="print-btn"></div>
+            <button id="cmd">Download PDF</button>
+            
+            <div id="piechart" style="width: 900px; height: 500px;"></div>
+
+            
+            <table id="antab">
+                <tr style="background-color: black; color: white; height: 50px; font-size: 30px;">
+                    <th>ANALYSIS TABLE</th>
+                </tr>
+                {% for key, value in result.items() %}
+                    <tr>
+                        {% if value==0 %}
+                            <td style="background-color:rgb(2, 116, 13);">{{ key }} </td>
+                        {% elif value==1 %}
+                            <td style="background-color:rgb(230, 210, 0); color: black;">{{ key }} </td>
+                        {% else %}
+                            <td style="background-color:rgb(255, 0, 0);">{{ key }} </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+        <p id="desc">&#169; Made by Team Infinity as a part of Smart India Hackathon 2022</p>
+    </div>
+</body>
+</html>

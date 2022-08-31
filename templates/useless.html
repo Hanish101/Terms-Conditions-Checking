@@ -1,0 +1,28 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current',{'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawFunction);
+        function drawFunction(){
+            var data= google.visualization.arrayToDataTable([
+                ['terms','quantity'],
+                ['good', 23],
+                ['medium', 12],
+                ['bad', 3]
+            ]);
+            var options = {
+                colors : ['green', 'yellow', 'red']
+            };
+            var chart= new google.visualization.PieChart(document.getElementById('box'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+    <div id="box" style="height:500px;width:700px">
+
+    </div>
+</body>
+</html>
